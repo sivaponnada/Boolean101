@@ -63,7 +63,7 @@ public class ProductController {
 
             if(null==demand || null == demand.id ) {
                 demand = new Demand();
-                demand.setQueryString(product.getName().toLowerCase());
+                demand.setQueryString(product.getName().trim().toLowerCase());
                 demand.setTimes(1);
                 demandRegistry.insert(demand);
             }else{

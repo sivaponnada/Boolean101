@@ -27,7 +27,7 @@ public class AdminController {
 
         System.out.print("############################# Intercepted  ###########################");
 
-        List<Demand> demands = demandRegistry.findAll();
+        List<Demand> demands = (List<Demand>) demandRegistry.findAllByOrderByTimesDesc();
 
         StringBuffer sb = new StringBuffer("");
         if(null==demands || demands.size() ==0){
